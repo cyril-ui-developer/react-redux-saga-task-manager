@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ListGroup from 'react-bootstrap/ListGroup';
 import timeConverter from '../utils/timeConverter';
 
-const Task = ({ _id, title }) => <ListGroup.Item>{timeConverter(_id)} : {title}</ListGroup.Item>;
+const Task = ({ _id, title }) => <ListGroup.Item>{_id} : {title}</ListGroup.Item>;
 
 Task.propTypes = {
   _id: PropTypes.string.isRequired,
