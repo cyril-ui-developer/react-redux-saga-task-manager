@@ -1,23 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ListGroup from 'react-bootstrap/ListGroup';
+import timeConverter from '../utils/timeConverter';
 
-function msToTime(duration) {
-  var milliseconds = parseInt((duration%1000)/100)
-      , seconds = parseInt((duration/1000)%60)
-      , minutes = parseInt((duration/(1000*60))%60)
-      , hours = parseInt((duration/(1000*60*60))%24);
-
-  hours = (hours < 10) ? "0" + hours : hours;
-  minutes = (minutes < 10) ? "0" + minutes : minutes;
-  seconds = (seconds < 10) ? "0" + seconds : seconds;
-
-  return hours + ":" + minutes + ":" + seconds;
-}
-
-const Task = ({ _id, title }) => <ListGroup.Item>{msToTime(_id)} {title}</ListGroup.Item>;
+const Task = ({ _id, title }) => <ListGroup.Item>{timeConverter(_id)} : {title}</ListGroup.Item>;
 
 Task.propTypes = {
+  _id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired
 };
 
