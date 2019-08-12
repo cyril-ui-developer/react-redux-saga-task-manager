@@ -16,5 +16,6 @@ export default () => (
     <Link className="btn btn-secondary" to="/new-task">
       + Add New Task
     </Link>
+    {/* comment one */}
   </NavigationBar>
 );
