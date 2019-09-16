@@ -21,7 +21,6 @@ class TaskDashboard extends Component {
             <Route exact path="/new-task" component={AddTask} />
           </Col>
         </Row>
-        =
       </Container>
     );
   }
